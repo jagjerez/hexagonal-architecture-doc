@@ -44,6 +44,7 @@ namespace GtMotive.Estimate.Microservice.Api
         {
             services.AddAuthorization(AuthorizationOptionsExtensions.Configure);
             services.AddMediatR(typeof(ApiConfiguration).GetTypeInfo().Assembly);
+            services.AddDomainServices();
             services.AddUseCases();
             services.AddPresenters();
         }
